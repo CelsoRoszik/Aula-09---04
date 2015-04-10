@@ -1,12 +1,100 @@
-*.class
+import java.util.Scanner;
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+public class main {
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+				Scanner sc = new Scanner(System.in);
+				int opc = 0;
+								
+				System.out.println("Quantas alunos deseja manipular?");
+				
+				
+				FilaAlunos fila;
+				int t; //tamanho
+				
+				System.out.print("Tamanho da fila");
+				t = sc.nextInt();
+				fila = new FilaAlunos(t);
+				
+							
+				do {
+					System.out.println("");
+					System.out.println("----------------");
+					System.out.println("MENU");
+					System.out.println("01 - INSERIR");
+					System.out.println("02 - REMOVER");
+					System.out.println("03 - IMPRIMIR");
+					System.out.println("04 - PESQ. RA");
+					System.out.println("05 - CONTAR Nº ELEMENTOS");
+					System.out.println("06 - SOMAR MENSALIDADES");
+					System.out.println("07 - MEDIA MENSALIDADES");
+					System.out.println("99 - SAIR");
+					System.out.println("----------------");
+					System.out.print("DIGITE A OPÇÃO");
+					opc = sc.nextInt();
+					
+					if (opc==1) 
+					{
+						Aluno a =new Aluno();
+						a.ra = sc.nextInt();
+						a.nome = sc.next();
+						a.mens = sc.nextDouble();
+						
+						
+						
+					} 
+					else 
+						{
+						if (opc==2) 
+						{
+							fila.Remover();
+							
+						} 
+						else
+							{
+							if (opc==3)
+							{
+								
+								fila.Imprimir();
+							}
+							else 
+								{
+								if (opc==4)
+								{
+									
+									fila.Pesquisar();
+								}
+								else
+									{
+									if (opc==5)
+									{
+																			
+									}
+									else
+									{
+										if (opc==6)
+										{
+																				
+										}
+										else
+										{
+											if (opc==5)
+											{
+																					
+											}
+										}
+									}
+								}
+							}
+						} 
+					}
+				}
+				while (opc != 99);
+			}
+	}
+
